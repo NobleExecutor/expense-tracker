@@ -12,7 +12,7 @@
         <h2 class="title">Expense Tracker</h2>
         <p class="balance" align="center">Balance: <span id="balance">0€</span></p>
       </header>
-      
+
       <section class="summary">
         <div class="card income">
           <h3>Income</h3>
@@ -29,7 +29,7 @@
         <form id="form">
           <input type="text" id="name" placeholder="Description" required />
           <input type="number" id="amount" placeholder="Amount" required />
-          <select required>
+          <select required id="select">
             <option value="">Category</option>
             <option>Food</option>
             <option>Rent</option>
@@ -37,8 +37,9 @@
             <option>Other</option>
           </select>
           <input type="date" id="date" required />
-          <button>Add</button>
+          <input type="submit" value="Add" id="submit">
         </form>
+        <p id="status"></p>
       </section>
 
       <section class="transactions">
@@ -46,5 +47,7 @@
         <ul id="list"></ul>
       </section>
     </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

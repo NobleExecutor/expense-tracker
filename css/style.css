@@ -59,13 +59,17 @@ input, select {
     border-radius: 5px;
 }
 
-button {
+#submit {
     width: 100%;
     background-color: #4F46E5;
     border: none;
     padding: 0.5rem;
     border-radius: 5px;
     color: #fff;
+}
+
+#submit:hover {
+    cursor: pointer;
 }
 
 form {
@@ -80,4 +84,12 @@ section.add-transaction {
 
 section.transactions {
     width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
 }
