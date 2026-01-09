@@ -4,7 +4,6 @@ const numberInput = document.getElementById("amount");
 const selectInput = document.getElementById("select");
 const dateInput = document.getElementById("date");
 
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -16,15 +15,18 @@ form.addEventListener("submit", (event) => {
   } else {
     document.getElementById("status").classList.remove("error");
     document.getElementById("status").classList.add("success");
-    document.getElementById("status").innerText = "Successfully submitted the new transaction";
+    document.getElementById("status").innerText =
+      "Successfully submitted the new transaction";
     setTimeout(() => {
-        document.getElementById("status").innerText = "";
+      document.getElementById("status").innerText = "";
     }, 3000);
-    
-    transactionInfo.description = textInput.value;
-    transactionInfo.amount = numberInput.value;
-    transactionInfo.category = selectInput.value;
-    transactionInfo.date = dateInput.value;
+
+    const transactionInfo = {
+      description: textInput.value,
+      amount: numberInput.value,
+      category: selectInput.value,
+      date: dateInput.value,
+    };
 
     form.reset();
 
