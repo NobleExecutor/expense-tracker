@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h2 class="title">Expense Tracker</h2>
+        <p class="balance" align="center">Balance: <span id="balance">0€</span></p>
+      </header>
+      
+      <section class="summary">
+        <div class="card income">
+          <h3>Income</h3>
+          <p class="income">0€</p>
+        </div>
+        <div class="card expense">
+          <h3>Expenses</h3>
+          <p class="expense">0€</p>
+        </div>
+      </section>
+
+      <section class="add-transaction">
+        <h2>Add Transaction</h2>
+        <form id="form">
+          <input type="text" id="name" placeholder="Description" required />
+          <input type="number" id="amount" placeholder="Amount" required />
+          <select required>
+            <option value="">Category</option>
+            <option>Food</option>
+            <option>Rent</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+          <input type="date" id="date" required />
+          <button>Add</button>
+        </form>
+      </section>
+
+      <section class="transactions">
+        <h2>Transactions</h2>
+        <ul id="list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
