@@ -7,7 +7,6 @@ const dateInput = document.getElementById("date");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("Successfully submitted form");
 
   if (numberInput.value < 0) {
     document.getElementById("status").classList.remove("success");
@@ -21,11 +20,16 @@ form.addEventListener("submit", (event) => {
     setTimeout(() => {
         document.getElementById("status").innerText = "";
     }, 3000);
+    
     transactionInfo.description = textInput.value;
     transactionInfo.amount = numberInput.value;
     transactionInfo.category = selectInput.value;
     transactionInfo.date = dateInput.value;
 
-    console.log(transactionInfo);
+    form.reset();
+
+    console.log("Transaction Info: ", transactionInfo);
+    transactionList.push(transactionInfo);
+    console.log("Transaction List: ", transactionList);
   }
 });

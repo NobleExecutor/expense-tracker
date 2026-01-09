@@ -4,3 +4,5 @@ let transactionInfo = {
   category: "",
   date: "",
 };
+
+let transactionList = [];
