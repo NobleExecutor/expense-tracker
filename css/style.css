@@ -19,8 +19,8 @@ main {
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 420px;
-    min-width: 400px;
+    max-width: 500px;
+    min-width: 500px;
 }
 
 .balance {
@@ -92,4 +92,23 @@ section.transactions {
 
 .success {
     color: green;
+}
+
+#list {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#list td:not(:last-child),
+#list th:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+#list tr:not(:last-child) td {
+  border-bottom: 1px solid #ddd;
+}
+
+#list tr:not(:last-child) {
+    border-bottom: 1px solid #ddd;
 }
